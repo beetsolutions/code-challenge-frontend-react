@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: "1em",
         width: "100% !important",
         height: "100% !important"
+    },
+    title: {
+       margin: "1em"
     }
 }));
 
@@ -36,6 +39,7 @@ const Weather = (props) => {
 
     return (
         <Grid container direction="column" className={classes.mainContainer}>
+            <Typography className={classes.title} variant="h6">Latest Weather at Elysium Planitia</Typography>
             <GridList className={classes.gridList}>
 
                 {weatherData.map((weather) => (
