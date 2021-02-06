@@ -26,8 +26,8 @@ const Data = (response) => {
                 max: wind?.mx,
                 average: wind?.av
             },
-            firstDate: "30 Jan",
-            lastDate: "Feb 01",
+            firstDate: new Date(data.First_UTC).toLocaleDateString(undefined, { month: "short", day: "numeric"}),
+            lastDate: new Date(data.Last_UTC).toLocaleDateString(undefined, { month: "short", day: "numeric"}),
         }
     })
 }
